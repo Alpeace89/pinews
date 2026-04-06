@@ -91,6 +91,19 @@
     }
 
     .hidden { display:none; }
+
+    .topic-summary-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .topic-summary-card h3 {
+      margin:0 0 10px 0;
+      color:#9fd0ff;
+      font-size:18px;
+    }
   </style>
 </head>
 <body>
@@ -98,7 +111,7 @@
 <header>
   <div class="wrap">
     <h1>PiNews</h1>
-    <div class="meta">Hourly news dashboard from RSS feeds. Updated: 2026-04-05 23:40 UTC</div>
+    <div class="meta">Hourly news dashboard from RSS feeds. Updated: 2026-04-06 00:26 UTC</div>
     <div class="meta">Current article window: last 24 hours</div>
 
     <div class="toplinks">
@@ -111,9 +124,9 @@
 
   
   <div class="section">
-    <h2>AI Summary</h2>
+    <h2>AI Summary: all news in last 24 hours</h2>
     <div class="card">
-      <div class="summary">Nigeria's military rescued 31 hostages following a church attack. UK police apprehended seven protesters near RAF base used by US. Ukraine and Syria collaborate on security measures in Zelenskyy’s statement. Driver faces traffic violation charges after an Lao New Year incident. The humanitarian crisis in Gaza has been overlooked, while Hamas armed wing rejects disarmament plans. An Israeli airstrike targeted a crowd in Gaza City. The Hamas wing refuses to accept the disarmament demands. Explosives were found near Hungary's gas pipeline, with Serbia’s president confirming it. Israel continues its deadly attacks on Gaza and Iran, Lebanon. War is more profitable than peace according to David Keen. Trump threatens Iran via social media post. Israel strikes Iran and Lebanon simultaneously while continuing attacks on Gaza. Internet restrictions in Iran escalate, setting a new record. Video evidence shows an Iranian missile targeting Haifa's residential building. Rodent infestations and violence spread among Gaza's tent camps again. The Christian community in Gaza observes Easter amidst historical strife.</div>
+      <div class="summary">Insecurity remains high across Europe as Ukraine's Zelensky meets new Syria leaders in Damascus for military cooperation. Nigeria’s army successfully rescues 31 hostages following a church attack, while Britain arrests seven protesters near RAF base used by US forces. The United States continues to face security challenges with a driver facing impaired driving charges after the Lao New Year incident. Ukraine and Syria pledge cooperation on security matters as Zelenskyy highlights joint efforts in combating conflict. Technology plays a significant role in various headlines, including enhanced military alliances, global humanitarian crises, cybersecurity threats, and human trafficking incidents. Russia's internet disruptions and continued attacks on Gaza highlight the geopolitical tensions between nations.</div>
 
       <div class="mode-line">
         
@@ -128,6 +141,79 @@
   </div>
   
 
+  
+  <div class="section">
+    <h2>Topic AI summaries: last 24 hours</h2>
+    <div class="topic-summary-grid">
+      
+      
+      
+      
+      <div class="card topic-summary-card">
+        <h3>Canada</h3>
+        <div class="summary">Recent canada coverage in the last 24 hours is led by . This summary reflects the main headlines currently tagged under canada.</div>
+        <div class="mode-line">
+          
+          <span class="mode-badge-det">deterministic</span>
+          
+          
+          · Articles: 0
+        </div>
+      </div>
+      
+      
+      
+      <div class="card topic-summary-card">
+        <h3>USA</h3>
+        <div class="summary">The headlines highlight various geopolitical and humanitarian issues within the United States and around the Middle East. The crisis in Gaza is being ignored despite its severe human rights violations (topics: conflict_security, middle_east, us, world). President Donald Trump threatens Iran with "hell" unless it complies with U.S. demands, while threatening allies to pressure them into participating in a war effort that offers no role in strategy (topics: conflict_security, middle_east, technology, us). The United States is accused of seeking to exploit the economy by controlling Venezuela's vast oil reserves and has sought a deal with Iran regarding Hormuz Strait access, despite warnings from Trump about targeting Iranian infrastructure if they do not comply (topics: conflict_security, middle_east, technology, us, world). The "week in pictures" includes coverage of ongoing conflicts, technological advancements related to space missions, and cultural events like Easter celebrations. The race to rescue a downed U.S. airman continues amid the growing tensions in the region (topics: middle_east, technology, us, world).</div>
+        <div class="mode-line">
+          
+          <span class="mode-badge-ai">AI</span>
+          
+          
+          Model: qwen2.5:1.5b
+          
+          · Articles: 13
+        </div>
+      </div>
+      
+      
+      
+      <div class="card topic-summary-card">
+        <h3>Middle East</h3>
+        <div class="summary">Ukraine's President Volodymyr Zelensky has met Syrian President Bashar al-Assad in Damascus and discussed military deals. There are efforts to cooperate on security between Ukraine and Syria despite ongoing conflict. The humanitarian crisis in Gaza continues with continued attacks from Israel, while Iran threatens to escalate tensions further.</div>
+        <div class="mode-line">
+          
+          <span class="mode-badge-ai">AI</span>
+          
+          
+          Model: qwen2.5:1.5b
+          
+          · Articles: 36
+        </div>
+      </div>
+      
+      
+      
+      <div class="card topic-summary-card">
+        <h3>Europe</h3>
+        <div class="summary">In recent news across Europe, Ukraine and Syria are collaborating on security matters, with Zelenskyy indicating mutual cooperation. Explosives have been discovered near a Hungarian gas pipeline in Serbia, raising concerns for European security. The Artemis II astronauts continue their journey to explore the moon further. Russia has confirmed explosives found at its gas pipelines leading into Hungary, potentially escalating tensions in the region. The US is working with allies to counter Iran's aggression, with Pope Leo delivering a message of peace amid geopolitical challenges during Easter services. The Green Party continues its push for church-state separation, while Germany faces debates over military bases' roles in international conflicts. In Estonia, rumors circulate about a city’s desire to secede and join Russia, leading to ongoing discussions about national identity and foreign relations.</div>
+        <div class="mode-line">
+          
+          <span class="mode-badge-ai">AI</span>
+          
+          
+          Model: qwen2.5:1.5b
+          
+          · Articles: 12
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  
+
   <div class="section">
     <h2>Topics</h2>
     <div class="topics">
@@ -135,15 +221,15 @@
       
       <div class="topic" data-topic="world">world (59)</div>
       
-      <div class="topic" data-topic="middle_east">middle_east (35)</div>
+      <div class="topic" data-topic="middle_east">middle_east (36)</div>
+      
+      <div class="topic" data-topic="technology">technology (33)</div>
       
       <div class="topic" data-topic="conflict_security">conflict_security (32)</div>
       
-      <div class="topic" data-topic="technology">technology (32)</div>
-      
       <div class="topic" data-topic="us">us (13)</div>
       
-      <div class="topic" data-topic="europe">europe (11)</div>
+      <div class="topic" data-topic="europe">europe (12)</div>
       
       <div class="topic" data-topic="asia_pacific">asia_pacific (2)</div>
       
@@ -161,6 +247,28 @@
   <div class="section">
     <h2>Latest Headlines</h2>
     <div id="articles">
+      
+      <div class="card article-card" data-topics="conflict_security europe middle_east technology world">
+        <div class="title">
+          <a href="https://www.france24.com/en/middle-east/20260405-ukraine-zelensky-meets-syria-new-leader-al-sharaa-in-damascus-pushes-military-deals" target="_blank">Ukraine's Zelensky meets Syria’s new leader in Damascus, pushes military deals</a>
+        </div>
+        <div class="info">France 24 · 2026-04-05T23:50:42+00:00</div>
+        <div class="summary">Ukrainian President Volodymyr Zelensky held talks in Damascus on Sunday with Syria’s new leader Ahmed al-Sharaa, as Kyiv pushes to deepen security ties across the Middle East amid its ongoing war with Russia. Arriving alongside Turkish Foreign Minister Hakan Fidan, Zelensky’s visit signals a bid to secure military cooperation and bolster regional partnerships.</div>
+
+        <div class="tags">
+          
+          <span class="tag" data-topic="conflict_security">conflict_security</span>
+          
+          <span class="tag" data-topic="europe">europe</span>
+          
+          <span class="tag" data-topic="middle_east">middle_east</span>
+          
+          <span class="tag" data-topic="technology">technology</span>
+          
+          <span class="tag" data-topic="world">world</span>
+          
+        </div>
+      </div>
       
       <div class="card article-card" data-topics="technology world">
         <div class="title">
@@ -1192,22 +1300,6 @@
         </div>
       </div>
       
-      <div class="card article-card" data-topics="conflict_security world">
-        <div class="title">
-          <a href="https://www.france24.com/en/sri-lanka-struggles-to-avert-economic-collapse-over-mideast-war" target="_blank">Sri Lanka struggles to avert economic collapse over Mideast war</a>
-        </div>
-        <div class="info">France 24 · 2026-04-05T09:30:18+00:00</div>
-        <div class="summary">Sri Lanka is struggling to prevent a repeat of its spectacular economic collapse four years ago, as the prolonged Middle East war compounds the fallout from a deadly cyclone in November.</div>
-
-        <div class="tags">
-          
-          <span class="tag" data-topic="conflict_security">conflict_security</span>
-          
-          <span class="tag" data-topic="world">world</span>
-          
-        </div>
-      </div>
-      
       <div class="card article-card" data-topics="europe world">
         <div class="title">
           <a href="https://www.dw.com/en/in-estonia-rumors-are-circulating-that-the-city-of-narva-wants-to-secede-and-join-russia-is-it-true/a-76663710?maca=en-rss-en-all-1573-xml-mrss" target="_blank">In Estonia, rumors are circulating that the city of Narva wants to secede and join Russia. Is it true?</a>
@@ -1275,7 +1367,7 @@
     }
 
     cards.forEach(card => {
-      const topics = (card.dataset.topics || '').split(/\s+/);
+      const topics = (card.dataset.topics || '').trim().split(/\s+/);
       if (topics.includes(topic)) {
         card.classList.remove('hidden');
       } else {
